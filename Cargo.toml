@@ -1,0 +1,21 @@
+[package]
+authors = ["zerosign <r1nlx0@gmail.com>"]
+name = "rubicx"
+version = "0.1.0"
+edition = '2018'
+
+[dev-dependencies]
+criterion = "0.2"
+
+[dependencies]
+log = "0.4.5"
+libc = "0.2.43"
+env_logger = "0.5.13"
+byteorder = "1.2.6"
+
+[profile.release]
+lto = true
+
+[[bench]]
+name = "segment_pool_bench"
+harness = false
